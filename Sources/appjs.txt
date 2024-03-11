@@ -1,0 +1,28 @@
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import ProductCart from "./Components/ProductCart";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Product from "./Components/Product";
+
+function App() {
+  return (
+    <div className="App mt-5">
+      <>
+      <Header/>
+        <BrowserRouter>
+           <Routes>
+               <Route path='/' element={<Home/>} />
+               <Route path='/cart' element={<Product/>} />
+           </Routes>
+        </BrowserRouter>
+       
+        
+       
+      </>
+    </div>
+  );
+}
+
+export default App;
